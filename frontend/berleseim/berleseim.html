@@ -39,8 +39,8 @@
         <nav>
             <a href="../hirlap/hirlap.html">Hírlap</a>
             <a href="../autok/autok.html">AUTÓK</a>
-            <a href="../berleseim/berleseim.html">BÉRLÉSEIM</a>
             <a href="../profilom/profilom.html">PROFILOM</a>
+            <a href="../fooldal/index.html">FŐOLDAL</a>
         </nav>
         <div id="google_translate_element"></div>
     </header>
@@ -87,14 +87,12 @@
         <p id="footer_p">Válogass prémium autóink közül, és indulj útnak stílusosan!</p>
     </footer>
     <script type="text/javascript">
-        // JavaScript function to toggle 'more-details' visibility
         document.querySelectorAll('.more-info').forEach(function(link) {
             link.addEventListener('click', function() {
                 const details = this.nextElementSibling;
                 details.classList.toggle('show');
             });
         });
-
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({pageLanguage: 'hu'}, 'google_translate_element');
         }

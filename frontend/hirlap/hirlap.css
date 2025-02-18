@@ -25,6 +25,9 @@ header nav {
     gap: 15px; 
     margin-right: 25px; 
     margin-left: 20px;   
+    color: black;
+    text-decoration: none; 
+    font-weight: bold;
 }
 
 header nav a {
@@ -44,6 +47,7 @@ header nav a:hover {
     background: rgba(255, 255, 255, 0.3);
     transform: scale(1.05); 
     text-decoration: none;
+    color: #ffd700; 
 }
 
 #focim {
@@ -200,4 +204,18 @@ footer p {
     #focim {
         font-size: 24px;
     }
+}
+
+.more-details {
+    display: none;
+    margin-top: 10px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: black;
+}
+
+.more-details.show {
+    display: block;
 }

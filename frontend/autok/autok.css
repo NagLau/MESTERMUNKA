@@ -3,19 +3,23 @@ body {
     color: #f0f0f0;
     font-family: 'Helvetica Neue', Arial, sans-serif;
 }
- 
+
 header {
     background-color: rgb(207, 188, 79);
     background: linear-gradient(90deg, rgb(207, 188, 79), #b8860b);
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    position: relative; 
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
     display: flex; 
     align-items: center; 
     justify-content: flex-end; 
-    padding: 10px 20px;
+    padding: 5px 15px;
     height: 60px; 
+    z-index: 1000; 
 }
 
 header nav {
@@ -42,15 +46,20 @@ header nav a:hover {
     background: rgba(255, 255, 255, 0.3);
     transform: scale(1.05); 
     text-decoration: none;
+    color: #ffd700;
 }
- 
+
+main {
+    padding: 50px 20px;
+}
+
 .card {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
 }
- 
+
 .card-header {
     background-color: #333;
     color: white;
@@ -59,47 +68,36 @@ header nav a:hover {
     display: flex;
     justify-content: space-between;
 }
- 
+
 .card-body {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-/*
-.card-body {
-    background-color: #fff;
-    padding: 20px;
-}
- 
-.card-body p {
-    font-size: 1rem;
-    margin-bottom: 10px;
-    color: #555;
-}*/
+
 .card-body .card-text {
     flex: 1; 
 }
- 
- 
+
 .card-body p1 {
     font-size: 1.1rem;
     font-weight: bold;
     color: #333;
 }
- 
+
 .card-footer {
     text-align: center;
     padding: 15px;
     background-color: #f1f1f1;
 }
- 
+
 .card-img-right {
     width: 40%; 
     max-width: 200px; 
     height: auto;
     object-fit: cover;
 }
- 
+
 .card-footer a {
     background-color: #ffd700;
     color: white;
@@ -107,26 +105,26 @@ header nav a:hover {
     text-decoration: none;
     border-radius: 5px;
 }
- 
+
 .card-footer a:hover {
     background-color: #ffd700;
 }
- 
+
 main {
     padding: 30px 15px;
 }
- 
+
 h2 {
     font-size: 1.8rem;
     font-weight: bold;
     margin-bottom: 20px;
     text-align: center;
 }
- 
+
 .row {
     margin-top: 30px;
 }
- 
+
 @media (max-width: 767px) {
     .card {
         margin-left: auto;
@@ -134,36 +132,12 @@ h2 {
         width: 90%;
     }
 }
- 
-.language-switcher {
-    background-color: #ffd700;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-}
- 
-.language-switcher:hover {
-    background-color: #ffd700;
-}
- 
-header nav a {
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-}
- 
-header nav a:hover {
-    color: #ffd700;
-}
- 
+
 footer {
     display: flex;
     justify-content: center; 
     align-items: center;
-    padding: 10px 20px;
+    padding: 20px;
     background-color: rgb(207, 188, 79);
     background: linear-gradient(90deg, rgb(207, 188, 79), #b8860b);
     color: white;
@@ -172,7 +146,15 @@ footer {
     position: relative; 
     height: 60px;
 }
- 
+
+footer p {
+    flex-grow: 1; 
+    text-align: center;
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+}
+
 #focim {
     color: black;
     font-weight: bold;
@@ -185,23 +167,8 @@ footer {
     top: 50%;
     transform: translateY(-50%);
 }
- 
-#pp {
-    color:  #ccc;
-    margin-left: -70px;
-    margin-top: 120px;
- 
-}
- 
-footer p {
-    flex-grow: 1;
-    text-align: center;
-    font-size: 16px;
-    color: black;
-    font-weight: bold;
-}
 
-#footer-img{
+#footer-img {
     max-height: 50px;
     position: absolute; 
     top: 0px;
@@ -211,22 +178,21 @@ footer p {
     height: auto;
     width: 50%;
     max-width: 100px; 
-    position: absolute;
     left: 10px;
     top: 35%;
     transform: translateY(-50%);
     max-height: 45px;
 }
 
-#foglalas{
+#foglalas {
     color: black;
 }
 
-#sav{
+#sav {
     background-color: #333;
 }
 
-#aktualis{
+#aktualis {
     font-size: 2.5rem;
     margin-bottom: 20px;
     color: #ffd700;
@@ -236,3 +202,5 @@ footer p {
 #foglalas:hover {
     background-color: rgba(101, 86, 86, 0.7);
 }
+
+

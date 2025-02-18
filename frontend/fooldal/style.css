@@ -23,6 +23,9 @@ header nav {
     gap: 15px; 
     margin-right: 25px; 
     margin-left: 20px;   
+    color: black;
+    text-decoration: none; 
+    font-weight: bold;
 }
 
 header nav a {
@@ -42,6 +45,7 @@ header nav a:hover {
     background: rgba(255, 255, 255, 0.3);
     transform: scale(1.05); 
     text-decoration: none;
+    color: #ffd700; 
 }
 
 main {
@@ -54,9 +58,17 @@ h1 {
     margin-bottom: 20px;
     color: #ffd700;
     font-weight: bold;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffd700;
+    font-weight: bold;
 }
 
 h2 {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    color: #ccc;
+    line-height: 1.5;
     font-size: 1.3rem;
     margin-bottom: 40px;
     color: #ccc;
@@ -70,9 +82,23 @@ h2 {
     justify-content: center;
     margin-top: 30px;
     gap: 20px;  
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .card {
+    background-color: #333;
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 18%; 
+    text-align: left;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1 1 300px;
+    max-width: 300px;
     background-color: #333;
     color: #fff;
     border-radius: 10px;
@@ -89,9 +115,15 @@ h2 {
     color: #ffd700;
     font-size: 1.5rem;
     margin-bottom: 10px;
+    color: #ffd700;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
 .card p {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.6;
     font-size: 1rem;
     color: #ccc;
     line-height: 1.6;
@@ -100,6 +132,7 @@ h2 {
 .card:hover {
     transform: scale(1.1); 
     box-shadow: 0 8px 22px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1); 
 }
 
 footer {
@@ -110,7 +143,17 @@ footer {
     padding: 20px;
     font-size: 18px;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
-    position: relative;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgb(207, 188, 79);
+    background: linear-gradient(90deg, rgb(207, 188, 79), #b8860b);
+    color: white;
+    font-size: 18px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+    position: relative; 
+    height: 60px;
 }
 
 .gallery-container {
@@ -122,9 +165,18 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    margin-top: 40px;
+    width: 85%;
+    position: relative;
+    overflow: hidden; 
 }
 
 .gallery {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
@@ -134,6 +186,11 @@ footer {
     height: 400px;
     object-fit: cover; 
     flex-shrink: 0;
+    width: 100%; 
+    height: auto;
+    object-fit: contain;
+    display: none; 
+    object-fit: auto
 }
 
 .prev, .next {
@@ -151,10 +208,18 @@ footer {
 
 .prev {
     left: 10px;
+    left: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .next {
     right: 10px;
+    right: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .prev:hover, .next:hover {
@@ -172,16 +237,14 @@ footer {
     left: 0; 
     top: 50%; 
     transform: translateY(-50%); 
-}
-
-header nav a {
     color: black;
-    text-decoration: none; 
     font-weight: bold;
-}
-
-header nav a:hover {
-    color: #ffd700; 
+    justify-content: flex-start;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 #footer-img{
@@ -206,94 +269,6 @@ main {
     text-align: center;
 }
 
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #ffd700;
-    font-weight: bold;
-}
-
-h2 {
-    font-size: 1.3rem;
-    margin-bottom: 40px;
-    color: #ccc;
-    line-height: 1.5;
-}
-
-.card-container {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
-.card {
-    background-color: #333;
-    color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    width: 18%; 
-    text-align: left;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    flex: 1 1 300px;
-    max-width: 300px;
-}
-
-.card h4 {
-    color: #ffd700;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.card p {
-    font-size: 1rem;
-    color: #ccc;
-    line-height: 1.6;
-}
-
-.card:hover {
-    transform: scale(1.1); 
-    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.3);
-}
-
-footer {
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    padding: 10px 20px;
-    background-color: rgb(207, 188, 79);
-    background: linear-gradient(90deg, rgb(207, 188, 79), #b8860b);
-    color: white;
-    font-size: 18px;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
-    position: relative; 
-    height: 60px;
-}
-
-.gallery-container {
-    display: flex;
-    justify-content: flex-start;
-    gap: 20px;
-    margin-top: 40px;
-    width: 85%;
-    position: relative;
-    overflow: hidden; 
-}
-
-.gallery {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.gallery img {
-    width: 100%; 
-    height: auto;
-    object-fit: contain;
-    display: none; 
-    object-fit: auto
-}
-
 .gallery img.show {
     display: block;
 }
@@ -315,33 +290,6 @@ button:hover {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-.prev {
-    left: 10px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.next {
-    right: 10px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-#focim {
-    color: black;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
 #pp {
     color:  #ccc;
     margin-left: -70px;
@@ -356,19 +304,6 @@ button:hover {
     align-items: center;
     margin-left: 20px;
     font-size: 16px; 
-}
-
-.book-now {
-    background-color: #b8860b; 
-    color: white;
-    border: none;
-    padding: 25px 50px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 300px;
-    border-radius: 5px;
-    transition: background-color 0.2s ease;
-    margin-left: -130px;
 }
 
 @keyframes blink {
@@ -388,6 +323,16 @@ button:hover {
     border-radius: 5px;
     transition: background-color 0.2s ease;
     margin-left: 10px; 
+    animation: blink 1.5s infinite;
+    background-color: #b8860b; 
+    color: white;
+    border: none;
+    padding: 25px 50px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+    margin-left: -130px;
 }
 
 footer p {
